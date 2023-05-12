@@ -1,0 +1,35 @@
+{
+  "name": "@datadome/react-native-datadome",
+  "version": "1.0.14",
+  "description": "Module for supporting DataDome in React Native applications.",
+  "main": "index.js",
+  "peerDependencies": {
+    "react-native": ">=0.59.0",
+    "@react-native-async-storage/async-storage": "^1.6.3",
+    "async-barrier": "^1.0.0",
+    "react-native-webview": "^7.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datadome/react-native-datadome.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "bridge",
+    "ios",
+    "android",
+    "react-component",
+    "datadome"
+  ],
+  "author": "Mohamed Hajlaoui <mohamed.hajlaoui@datadome.co> (https://datadome.co/)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/datadome/react-native-datadome/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/datadome/react-native-datadome/issues"
+  },
+  "homepage": "https://github.com/datadome/react-native-datadome#readme"
+}
