@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/datadome/react-native-datadome.git"
+    "url": "https://github.com/humqn/react-native-datadome.git"
   },
   "keywords": [
     "react",
@@ -26,10 +26,10 @@
   "author": "Mohamed Hajlaoui <mohamed.hajlaoui@datadome.co> (https://datadome.co/)",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/datadome/react-native-datadome/blob/master/LICENSE"
+    "url": "https://github.com/humqn/react-native-datadome/blob/master/LICENSE"
   },
   "bugs": {
-    "url": "https://github.com/datadome/react-native-datadome/issues"
+    "url": "https://github.com/humqn/react-native-datadome/issues"
   },
-  "homepage": "https://github.com/datadome/react-native-datadome#readme"
+  "homepage": "https://github.com/humqn/react-native-datadome#readme"
 }
