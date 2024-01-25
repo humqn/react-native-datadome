@@ -39,13 +39,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/datadome/react-native-datadome.git",
+  "repository": "https://github.com/humqn/react-native-datadome.git",
   "author": "DataDome <dev@datadome.co> (https://datadome.co/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/datadome/react-native-datadome.git/issues"
+    "url": "https://github.com/humqn/react-native-datadome.git/issues"
   },
-  "homepage": "https://github.com/datadome/react-native-datadome.git#readme",
+  "homepage": "https://github.com/humqn/react-native-datadome.git#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
