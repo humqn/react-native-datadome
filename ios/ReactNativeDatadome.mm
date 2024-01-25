@@ -1,19 +1,10 @@
-//
-//  RNDatadome.m
-//  RNDatadome
-//
-//  Created by Hugh Maurer on 10/11/2019.
-//  Copyright (c) 2019 DataDome. All rights reserved.
-//
-
-#import "RNDatadome.h"
+#import "ReactNativeDatadome.h"
 #import <React/RCTLog.h>
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
-@implementation RNDatadome
-
-RCT_EXPORT_MODULE(RNDatadome)
+@implementation ReactNativeDatadome
+RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(setDataDomeCookie:(NSString *)cookie) {
     RCTLogInfo(@"Setting cookie %@", cookie);

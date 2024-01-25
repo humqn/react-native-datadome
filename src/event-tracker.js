@@ -3,6 +3,7 @@ import { Platform } from 'react-native';
 import RNDatadome from './datadome-module';
 
 export default class EventTracker {
+	static lastTrackedRequestTime = 0;
 
 	static logEvent = async (DataDome, url, options) => {
 		let key = DataDome.getInstance().getSdkKey();
@@ -10,6 +11,10 @@ export default class EventTracker {
 		// no cookie is set with Lambda@Edge be cause set-cookie header is not sent
 		if (cookie == null) {
 			cookie = ""
+		}
+		// payload sender interval of 10 seconds
+		if (Date.now() - EventTracker.lastTrackedRequestTime < 10000) {
+			return
 		}
 
 		fetch('https://api-sdk.datadome.co/sdk/', {
@@ -24,17 +29,22 @@ export default class EventTracker {
 		})
 		.then(function(json) {
 			DataDome.getInstance().storeCookie(json.cookie)
+			EventTracker.lastTrackedRequestTime = Date.now()
 		});
 	}
 
 	static body = async (DataDome, url, key, cookie, options) => {
+		var os = Platform.OS
+		if(os == "android") { os = "Android" } 
+		else if(os == "ios") { os = "iOS" }
+
 		var details = {
 			'cid': DataDome.getInstance().parseDataDomeCookie(cookie),
-			'ddv': '1.0.14',
+			'ddv': '1.2.1',
 			'ddvc': await RNDatadome.appVersion(),
 			'ddk': key,
 			'request': url,
-			'os': Platform.OS,
+			'os': os,
 			'osr': await RNDatadome.systemVersion(),
 			'osn': await RNDatadome.systemName(),
 			'osv': await RNDatadome.systemShortVersion(),
